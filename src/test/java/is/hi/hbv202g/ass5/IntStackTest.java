@@ -21,11 +21,9 @@ public class IntStackTest {
 
     @Test
     public void testFullStackIsFull() {
-        int i = 0;
-        while(stack.getCapacity()!=10) {
+        for (int i =0; i < stack.getCapacity(); i++) {
             stack.push(i);
-            i++;
         }
+        assertTrue(stack.isFull());
     }
-
 }
