@@ -34,4 +34,10 @@ public class IntStackTest {
         }
         assertFalse(stack.isFull());
     }
+
+    @Test
+    public void testPopReturnsPushedValue() {
+        stack.push(100);
+        assertEquals(100, stack.pop());
+    } 
 }
