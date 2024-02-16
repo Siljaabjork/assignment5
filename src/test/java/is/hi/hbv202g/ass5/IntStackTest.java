@@ -40,4 +40,18 @@ public class IntStackTest {
         stack.push(100);
         assertEquals(100, stack.pop());
     } 
+
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void popOnAnEmptyStack() {
+        stack.pop();
+    }
+
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void pushOnFullStack() {
+        for(int i = 0; i < stack.getCapacity(); i++) {
+            stack.push(i);
+        }
+        stack.push(999); 
+    }
+
 }
