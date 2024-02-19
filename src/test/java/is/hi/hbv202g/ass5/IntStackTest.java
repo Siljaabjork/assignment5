@@ -52,6 +52,20 @@ public class IntStackTest {
             stack.push(i);
         }
         stack.push(999); 
+    } 
+
+    @Test
+    public void testStackIsEmptyA() {
+        stack.push(1);
+        assertFalse(stack.isEmpty());
+    }
+
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void testStackIsEmptyB() {
+        for(int i = 0; i < stack.getCapacity(); i++) {
+            stack.pop();
+    }
+    assertTrue(stack.isEmpty());
     }
 
 }

@@ -1,5 +1,6 @@
 package is.hi.hbv202g.ass5;
 
+
 /**
  * A very simple stack for storing the basic type int.
  * The stack has a fixed capacity.
@@ -72,4 +73,7 @@ public class IntStack {
         return theStack[--nextPushLocation];
     }
 
+    public boolean isEmpty() {
+        return nextPushLocation==0;
+    }
 }
